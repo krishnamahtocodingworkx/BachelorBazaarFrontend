@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 🎨 Light Mode Colors */
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --foreground: #1f2937;
+  --text-secondary: #4b5563;
+  --primary: #395efa;
+  --primary-light: #7391ff;
+  --secondary: #ff7043;
+  --border: #e5e7eb;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --success: #10b981;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212;
+    --surface: #1E1E1E;
+    --foreground: #F5F5F5;
+    --text-secondary: #BDBDBD;
+    --primary: #7391FF;
+    --primary-light: #A1B5FF;
+    --secondary: #FF8A65;
+    --border: #2D2D2D;
+    --error: #F87171;
+    --warning: #FBBF24;
+    --success: #34D399;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .flex-row-center-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-col-center-center {
+    @apply flex flex-col items-center justify-center;
+  }
+  .flex-between-center {
+    @apply flex items-center justify-between;
+  }
+  .flex-row-between-center {
+    @apply flex flex-row items-center justify-between;
+  }
 }
