@@ -4,15 +4,16 @@ import Link from 'next/link'
 import { NavItems, STRINGS } from '@/utils/contant'
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import { Input } from '@mui/material';
+import "./navbar.css"
 
 const Navbar = () => {
     return (
-        <nav className='w-full flex-between-center flex-col md:flex-row px-8 py-4'>
+        <nav className='nav-container'>
             <Link href={"/"} aria-label='home page'>{STRINGS.appName}</Link>
 
-            <div>
+            <div className='nav-links'>
                 {NavItems.map((item, i) => (
-                    <Link key={item.label + i} aria-label={item.label} href={item.href}>{item.label}</Link>
+                    <Link key={item.label + i} aria-label={item.label} href={item.href} className="nav-link">{item.label}</Link>
                 ))}
             </div>
 

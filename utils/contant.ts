@@ -1,5 +1,5 @@
 export const STRINGS = {
-    appName: "Bachelor Bazaar"
+    appName: "BB"
 }
 
 export const NavItems = [
